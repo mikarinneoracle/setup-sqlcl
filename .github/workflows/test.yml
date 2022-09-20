@@ -31,5 +31,5 @@ jobs:
           #url: "${{ secrets.DB_URL }}"
 
       - run: |
-          ls ./sqlcl/bin
-          ./sqlcl/bin/sql -V
+          #./sqlcl/bin/sql -V
+          sql -V
