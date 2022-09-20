@@ -22,4 +22,4 @@ jobs:
           password: "${{ secrets.DB_PASSWORD }}"
           url: "${{ secrets.DB_URL }}"
 
-      - run: sql show_version.sql
+      #- run: sql show_version.sql
