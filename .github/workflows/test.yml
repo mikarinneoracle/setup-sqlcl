@@ -22,4 +22,4 @@ jobs:
           #password: "${{ secrets.DB_PASSWORD }}"
           #url: "${{ secrets.DB_URL }}"
 
-      - run: sql ${{ secrets.DB_USER }}/${{ secrets.DB_PASSWORD }}@'${{ secrets.DB_URL }}' @./show_version.sql
+      - run: sql ${{ secrets.DB_USER }}/${{ secrets.DB_PASSWORD }}@'${{ secrets.DB_URL }}'
