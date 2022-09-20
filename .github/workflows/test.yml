@@ -30,4 +30,6 @@ jobs:
           #password: "${{ secrets.DB_PASSWORD }}"
           #url: "${{ secrets.DB_URL }}"
 
-      - run: sql -V
+      - run: |
+          ls ./sqlcl/bin
+          ./sqlcl/bin/sql -V
