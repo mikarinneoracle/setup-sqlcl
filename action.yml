@@ -1,6 +1,5 @@
 name: 'setup-sqlcl'
 description: 'Setup Oracle Sqlcl'
-
 author: 'Christophe Pruvost @cpruvost'
 inputs:
   user:
@@ -13,10 +12,10 @@ inputs:
     description: 'Db Url'
     required: true
 
-  runs:
-    using: 'node12'
-    main: 'dist/index.js'
-    pre-if: 'runner.os == linux'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+  pre-if: 'runner.os == linux'
 
 branding:
   icon: 'cloud'
