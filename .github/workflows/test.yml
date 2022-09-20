@@ -18,4 +18,4 @@ jobs:
       - name: Install Oracle Sqlcl
         uses: cpruvost/setup-sqlcl@main
 
-      - run: sql -V
+      - run: sql -V -S
