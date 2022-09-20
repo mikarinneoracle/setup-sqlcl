@@ -14,6 +14,12 @@ jobs:
     steps:
 
       - uses: actions/checkout@v3
+
+      - name: 'Set up latest Oracle JDK 17'
+        uses: oracle-actions/setup-java@v1
+        with:
+         website: oracle.com
+         release: 17    
       
       - name: Install Oracle Sqlcl
         uses: cpruvost/setup-sqlcl@main
@@ -22,4 +28,4 @@ jobs:
           #password: "${{ secrets.DB_PASSWORD }}"
           #url: "${{ secrets.DB_URL }}"
 
-      - run: sql '${{ secrets.DB_USER }}/${{ secrets.DB_PASSWORD }}@${{ secrets.DB_URL }}'
+      - run: sql -V
