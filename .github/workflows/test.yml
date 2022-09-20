@@ -1,4 +1,4 @@
-name: ci
+name: test
 
 on: 
   push:
@@ -24,11 +24,7 @@ jobs:
       - run: java -version
 
       - name: Install Oracle Sqlcl
-        uses: cpruvost/setup-sqlcl@main
-        #with:
-          #user: "${{ secrets.DB_USER }}"
-          #password: "${{ secrets.DB_PASSWORD }}"
-          #url: "${{ secrets.DB_URL }}"
+        uses: cpruvost/setup-sqlcl@v1.0.0
 
       - run: |
           ./sqlcl/bin/sql -V
