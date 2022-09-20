@@ -1,5 +1,6 @@
 const core = require('@actions/core');
-
+const Util = require('util');
+const execSync = Util.promisify(require('child_process').execSync);
 
 // most @actions toolkit packages have async methods
 async function run() {

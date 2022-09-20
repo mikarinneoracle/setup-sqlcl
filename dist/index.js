@@ -1563,6 +1563,14 @@ module.exports = require("assert");
 
 /***/ }),
 
+/***/ 129:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("child_process");
+
+/***/ }),
+
 /***/ 614:
 /***/ ((module) => {
 
@@ -1677,7 +1685,8 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const core = __nccwpck_require__(186);
-
+const Util = __nccwpck_require__(669);
+const execSync = Util.promisify(__nccwpck_require__(129).execSync);
 
 // most @actions toolkit packages have async methods
 async function run() {
