@@ -1,4 +1,4 @@
-require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 351:
@@ -1555,19 +1555,10 @@ exports.debug = debug; // for test
 
 /***/ }),
 
-/***/ 258:
+/***/ 653:
 /***/ ((module) => {
 
-let wait = function (milliseconds) {
-  return new Promise((resolve) => {
-    if (typeof milliseconds !== 'number') {
-      throw new Error('milliseconds not a number');
-    }
-    setTimeout(() => resolve("done!"), milliseconds)
-  });
-};
-
-module.exports = wait;
+module.exports = eval("require")("./wait");
 
 
 /***/ }),
@@ -1694,7 +1685,7 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const core = __nccwpck_require__(186);
-const wait = __nccwpck_require__(258);
+const wait = __nccwpck_require__(653);
 
 
 // most @actions toolkit packages have async methods
@@ -1729,4 +1720,3 @@ run();
 module.exports = __webpack_exports__;
 /******/ })()
 ;
-//# sourceMappingURL=index.js.map
