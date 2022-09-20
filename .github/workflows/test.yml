@@ -17,5 +17,9 @@ jobs:
       
       - name: Install Oracle Sqlcl
         uses: cpruvost/setup-sqlcl@main
+        with:
+          user: "${{ secrets.DB_USER }}"
+          password: "${{ secrets.DB_PASSWORD }}"
+          url: "${{ secrets.DB_URL }}"
 
       - run: sql show_version.sql

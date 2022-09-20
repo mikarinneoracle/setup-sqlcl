@@ -1,6 +1,23 @@
 name: 'setup-sqlcl'
 description: 'Setup Oracle Sqlcl'
 
-runs:
-  using: 'node12'
-  main: 'dist/index.js'
+author: 'Christophe Pruvost @cpruvost'
+inputs:
+  user:
+    description: 'Db User'
+    required: true
+  password:
+    description: 'Db Password'
+    required: true
+  url:
+    description: 'Db Url'
+    required: true
+
+  runs:
+    using: 'node12'
+    main: 'dist/index.js'
+    pre-if: 'runner.os == linux'
+
+branding:
+  icon: 'cloud'
+  color: 'red'
