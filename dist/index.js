@@ -1702,7 +1702,7 @@ async function run() {
     execSync('wget https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip');
     execSync('unzip sqlcl-latest.zip');
     execSync('alias sql="./sqlcl/bin/sql"');
-    execSync('exit | sql ${user}@${url}/${password} @./show_version.sql');
+    execSync(`sql -V`, {stdio: 'inherit'});
 
   } catch (error) {
     core.setFailed(error.message);
