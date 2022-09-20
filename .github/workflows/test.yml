@@ -24,7 +24,7 @@ jobs:
       - run: java -version
 
       - name: Install Oracle Sqlcl
-        uses: cpruvost/setup-sqlcl@main
+        uses: cpruvost/setup-sqlcl@v1.0.0
 
       - run: |
           ./sqlcl/bin/sql -V
