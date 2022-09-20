@@ -15,7 +15,7 @@ async function run() {
 
     execSync('wget https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip');
     execSync('unzip sqlcl-latest.zip');
-    execSync('export PATH=$PATH:./sqlcl/bin/sql/bin');
+    //execSync('export PATH=$PATH:./sqlcl/bin/sql/bin');
     //execSync(`sql -S ${user}@${url}/${password} @./show_version.sql`, {stdio: 'inherit'});
 
   } catch (error) {

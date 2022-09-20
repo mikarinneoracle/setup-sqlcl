@@ -31,5 +31,6 @@ jobs:
           #url: "${{ secrets.DB_URL }}"
 
       - run: |
-          #./sqlcl/bin/sql -V
-          sql -V
+          ./sqlcl/bin/sql -V
+          exit | ./sqlcl/bin/sql ${{ secrets.DB_USER }}/${{ secrets.DB_PASSWORD }}@'${{  secrets.DB_URL }}' @./show_tables.sql
+      
