@@ -1,4 +1,4 @@
-/******/ (() => { // webpackBootstrap
+require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 351:
@@ -1695,10 +1695,9 @@ async function run() {
       throw new Error('This action runs only on Linux currently');
     }
 
-    execSync('wget https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip');
-    execSync('unzip sqlcl-latest.zip');
-    
-    //TO_DO : add an alias "sql"
+    // Using SQLcl: Release 22.2.1.0 Production Build: 22.2.1.201.1456 instead of the latest due to Liquibase bug
+    execSync('wget https://objectstorage.eu-amsterdam-1.oraclecloud.com/p/rBz7NIZQsEXsXN6yqnLn8m9fLmTHZUY7Z5uhPBBUzsoiW0ceUoY1jyU5y7DjEWJx/n/frsxwtjslf35/b/oracledb/o/V1022102-01.zip');
+    execSync('unzip -q V1022102-01.zip');
 
   } catch (error) {
     core.setFailed(error.message);
@@ -1712,3 +1711,4 @@ run();
 module.exports = __webpack_exports__;
 /******/ })()
 ;
+//# sourceMappingURL=index.js.map
